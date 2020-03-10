@@ -26,7 +26,7 @@ const load = id =>
       .catch(reject);
   });
 
-  const random = ()=>
+const random = () =>
   new Promise((resolve, reject) => {
     instance
       .get(`/random`)
@@ -38,5 +38,20 @@ const load = id =>
   });
 
 
+  const add = data =>
+  new Promise((resolve, reject) => {
+    instance
+      .post('/new', data)
+      .then(result => {
+        const beer = result.data;
+        resolve(beer);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
 
-export { list, load, random };
+
+
+
+export { list, load, random, add };

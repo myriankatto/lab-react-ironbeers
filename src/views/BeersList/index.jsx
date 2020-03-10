@@ -8,8 +8,19 @@ class BeersList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      beers: []
+      beers: [],
+      query: ''
     };
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+
+    // console.log(name, value);
   }
 
   componentDidMount() {
@@ -31,6 +42,15 @@ class BeersList extends Component {
   render() {
     return (
       <div>
+        <form className="search-form">
+          <input
+            type="search"
+            name="query"
+            value={this.state.query}
+            onChange={this.handleInputChange}
+            placeholder="Search for a Beer..."
+          />
+        </form>
         <div className="beer__list">
           {this.state.beers.map(beer => (
             <SingleBeer key={beer._id} {...beer} />
@@ -42,4 +62,3 @@ class BeersList extends Component {
 }
 
 export default BeersList;
-
