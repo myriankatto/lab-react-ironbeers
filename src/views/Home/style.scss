@@ -1,0 +1,13 @@
+.beer__home {
+  display: flex;
+  flex-direction: column;
+}
+
+.beer-box {
+  border: 1px solid black;
+  padding: 1em;
+  width: 60%;
+  margin: 1em auto;
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,17 @@
+.beer__single {
+  display: flex;
+  border-bottom: 1px solid rgb(206, 206, 206);
+  img {
+    width: 3em;
+  }
+  h1 {
+    font-size: 1.2em;
+    font-weight: 200;
+  }
+  span {
+    display: block;
+    font-size: 1em;
+    font-weight: 100;
+    color: rgb(150, 150, 150);
+  }
+}

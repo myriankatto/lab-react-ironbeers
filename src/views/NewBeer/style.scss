@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  input,
+  textarea {
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+  }
+  label {
+    margin: 0 1em;
+  }
+  button {
+    background-color: rgb(39, 19, 223);
+    color: inherit;
+    padding: 1em;
+    border: none;
+    color: white;
+    margin: 1em 5em;
+  }
+}
