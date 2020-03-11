@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SingleBeer from './../../components/SingleBeer';
 import './style.scss';
 
-import { list as beerList } from './../../services/beers';
+import { list as beerList, filter as filteredBeer } from './../../services/beers';
 
 class BeersList extends Component {
   constructor(props) {
@@ -19,8 +19,16 @@ class BeersList extends Component {
     this.setState({
       [name]: value
     });
-
     // console.log(name, value);
+    filteredBeer(value)
+      .then(beers => {
+        this.setState({
+          beers
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   componentDidMount() {

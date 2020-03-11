@@ -37,8 +37,7 @@ const random = () =>
       .catch(reject);
   });
 
-
-  const add = data =>
+const add = data =>
   new Promise((resolve, reject) => {
     instance
       .post('/new', data)
@@ -51,7 +50,17 @@ const random = () =>
       });
   });
 
+const filter = query =>
+  new Promise((resolve, reject) => {
+    instance
+      .get(`/search?q=${query}`)
+      .then(result => {
+        const filteredBeers = result.data;
+        resolve(filteredBeers);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
 
-
-
-export { list, load, random, add };
+export { list, load, random, add, filter };
