@@ -74,7 +74,7 @@ class NewBeer extends Component {
           <label htmlFor="first-brewed-input">First Brewed</label>
           <input
             type="text"
-            name="first-brewed"
+            name="first_brewed"
             placeholder="First Brewed"
             value={this.state.beer.first_brewed}
             onChange={this.handleChange}

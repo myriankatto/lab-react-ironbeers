@@ -8,8 +8,7 @@ class BeersList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      beers: [],
-      query: ''
+      beers: []
     };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -56,7 +55,7 @@ class BeersList extends Component {
             name="query"
             value={this.state.query}
             onChange={this.handleInputChange}
-            placeholder="Search for a Beer..."
+            placeholder="Search for a beer..."
           />
         </form>
         <div className="beer__list">

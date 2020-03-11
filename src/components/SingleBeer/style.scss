@@ -1,17 +1,33 @@
 .beer__single {
   display: flex;
   border-bottom: 1px solid rgb(206, 206, 206);
+  padding: 1em 0.7em 1em 0 ;
+  width: 80%;
+  margin: 0 auto;
+
   img {
     width: 3em;
   }
   h1 {
     font-size: 1.2em;
     font-weight: 200;
+    color: #02aab0;
   }
   span {
+    margin-top: 0.1em;
     display: block;
     font-size: 1em;
     font-weight: 100;
-    color: rgb(150, 150, 150);
+    color: rgb(51, 51, 51);
   }
+
+  small {
+    font-size: 0.6em;
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+  }
+}
+
+.beer__single__info {
+  text-decoration: inherit;
 }
